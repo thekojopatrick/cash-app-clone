@@ -1,0 +1,58 @@
+.Header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 50px 0;
+}
+
+.HeaderGroup {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NavLinks {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: center;
+  gap: 20px;
+}
+
+.Header a {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width:640px) {
+  .Header {
+    padding: 15px 0;
+  }
+  .HeaderGroup {
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "a b c";
+    justify-content: space-between;
+    margin: 10px;
+    text-align: center;
+  }
+  .HeaderGroup div:nth-child(3) {
+    /* display: none; */
+    grid-area: c;
+  }
+  .NavLinks {
+    grid-area: b;
+    align-items: right;
+    justify-content: center;
+    /* gap: 6px; */
+    display: none;
+  }
+  /* .NavLinks a:nth-child(1) {
+    display: none;
+  }
+  .NavLinks a:nth-child(n+2) {
+    display: none;
+  } */
+}

@@ -1,0 +1,90 @@
+.HeaderFooter {
+  margin: 0 auto;
+}
+
+.HeaderFooterGroup {
+  display: grid;
+  grid-template-columns: 30% 25% 30% 15%;
+  grid-template-rows: auto;
+  align-items: center;
+  text-align: center;
+  grid-template-areas: 'a b c d';
+}
+
+.DownloadIcons {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.DownloadIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Agrandir;
+  font-size: .8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  gap: 0.9rem;
+}
+
+.DownloadIcons svg {
+  /* margin-right: 5px; */
+}
+
+#ArrowDown {
+  text-align: center;
+  cursor: pointer;
+}
+
+#ArrowDown svg {
+  margin-left: 100px;
+}
+
+#PolicyText {
+  color: #B6B6B6;
+  text-align: justify;
+  font-size: 0.7rem;
+}
+
+.SocialMediaButton {
+  text-align: center;
+}
+
+.SocialMediaButton svg {
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media(max-width:640px) {
+  .HeaderFooterGroup {
+    grid-template-columns: 1fr;
+    grid-template-areas: " a " " b " " c" " d ";
+    justify-content: space-between;
+    gap: 3.12rem;
+    padding: 1.2rem;
+  }
+  .SocialMediaButton {
+    grid-area: a;
+  }
+  .DownloadIcons {
+    grid-area: b;
+    flex-direction: column;
+  }
+  
+  #PolicyText {
+    grid-area: c;
+  }
+  #ArrowDown {
+    grid-area: d;
+  }
+  #ArrowDown svg {
+    margin-left: 0;
+  }
+}
